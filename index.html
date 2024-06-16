@@ -20,16 +20,54 @@
         <a href="neptune.html">Neptune</a>
       </div>
     </header>
+
     <main>
-      <h1>Space<font color="aqua">Ex</font></h1>
+      <h1 class="heading">Space<font color="aqua">Ex</font></h1>
       <p>
         Venturing <font color="aqua">Beyond the Horizon:</font> Where the Future
         of Space Exploration Begins
       </p>
       <div class="rocket">
-        <img src="src/rocket.png" height="200px" />
+        <img src="src/rocket.png" />
+      </div>
+      <div class="planet-container">
+        <div class="planet-card">
+          <h1><a href="mercury.html">Mercury</a></h1>
+        </div>
+        <div class="planet-card">
+          <h1><a href="venus.html">Venus</a></h1>
+        </div>
+        <div class="planet-card">
+          <h1><a href="earth.html">Earth</a></h1>
+        </div>
+        <div class="planet-card">
+          <h1><a href="mars.html">Mars</a></h1>
+        </div>
+        <div class="planet-card">
+          <h1><a href="jupiter.html">Jupiter</a></h1>
+        </div>
+        <div class="planet-card">
+          <h1><a href="saturn.html">Saturn</a></h1>
+        </div>
+        <div class="planet-card">
+          <h1><a href="uranus.html">Uranus</a></h1>
+        </div>
+        <div class="planet-card">
+          <h1><a href="neptune.html">Neptune</a></h1>
+        </div>
       </div>
     </main>
-    <!-- <script src="script.js"></script> -->
+    <span class="watermark">Made By <a href="https://github.com/hdz-088/"><font color="aqua">HDz</font></a>🦉</span>
+    <script>
+      var aTags = document.querySelectorAll("a");
+
+      for (var i = 0; i < aTags.length; i++) {
+        var aTag = aTags[i];
+        aTag.addEventListener("click", function (e) {
+          var ele = e.target;
+          window.location.replace(ele.getAttribute("data-href"));
+        });
+      }
+    </script>
   </body>
 </html>

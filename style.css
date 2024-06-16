@@ -42,7 +42,7 @@ header .title {
   text-transform: capitalize;
   font-family: "Orbitron", sans-serif;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 1.9rem;
   margin-left: 20px;
 }
 
@@ -64,28 +64,33 @@ header .active {
 
 /* index.html */
 
-main h1 {
+main .heading {
   margin-top: 100px;
   font-family: "Orbitron", sans-serif;
-  font-size: 80px;
+  /* font-size: 80px; */
+  font-size: 5rem;
   text-align: center;
   text-shadow: 0px 4px 7px rgba(0, 255, 255, 0.8);
 }
 
 main p {
   font-family: "Sen", sans-serif;
-  font-size: 20px;
+  font-size: 1.5rem;
   text-align: center;
   text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.74);
 }
 
-.rocket {
+main .rocket {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 100px;
   position: relative;
   animation: animate 0.2s ease infinite;
+}
+
+main .rocket img {
+  height: 12.5rem;
 }
 
 @keyframes animate {
@@ -104,8 +109,8 @@ main p {
   bottom: -87px;
   left: 50%;
   transform: translateX(-50%);
-  width: 30px;
-  height: 100px;
+  width: 2rem;
+  height: 6.2rem;
   background: linear-gradient(#00d0ff, transparent);
 }
 
@@ -115,17 +120,60 @@ main p {
   bottom: -87px;
   left: 50%;
   transform: translateX(-50%);
-  width: 30px;
-  height: 100px;
+  width: 2rem;
+  height: 6.2rem;
   background: linear-gradient(#00d0ff, transparent);
   filter: blur(10px);
+}
+
+main .planet-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 10vh;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+main .planet-container .planet-card {
+  border: 1px solid #ffffff42;
+  border-radius: 10px;
+  height: auto;
+  width: 20%;
+  padding: 10px;
+  transform: 1s linear ease;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 30px;
+  backdrop-filter: blur(6.6px);
+  -webkit-backdrop-filter: blur(6.6px);
+}
+
+main .planet-container .planet-card:hover {
+  background-color: #00d0ff;
+  color: #060524 !important;
+}
+
+main .planet-container .planet-card h1 {
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+main .planet-container .planet-card a {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 /* PLANET */
 
 #container {
   /* border: 1px solid red; */
-  padding: 60px;
+  /* padding: 60px; */
+  padding: 3rem;
   height: 55vh;
   display: flex;
 }
@@ -170,6 +218,8 @@ main p {
 .info a {
   text-decoration: none;
   color: #fff;
+  height: auto;
+  margin-bottom: auto;
 }
 
 .cards {
@@ -194,9 +244,9 @@ main p {
   cursor: pointer;
 }
 
-.cards .card:hover{
+.cards .card:hover {
   background-color: #00d0ff;
-  color: #060524;
+  color: #060524 !important;
 }
 
 .card h1 {
@@ -216,7 +266,7 @@ main p {
   color: #ffffff93;
 }
 
-.card p:hover{
+.card p:hover {
   color: #060524;
 }
 
@@ -233,4 +283,151 @@ main p {
 
 ::-webkit-scrollbar {
   width: 0px;
+}
+
+a {
+  text-decoration: inherit;
+}
+
+.watermark{
+  position: fixed;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Sen";
+  bottom: 2%;
+  right: 45%;
+  /* left: 40%; */
+}
+
+/* For Display Width Above 1000px */
+@media only screen and (min-width: 1000px) {
+  main .planet-container {
+    display: none;
+  }
+}
+
+/* For Display Width Between 600px And 1000px */
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  header .title {
+    font-size: 2.8rem;
+  }
+  header .links {
+    display: none;
+  }
+  main .heading {
+    font-size: 10rem;
+  }
+  main p {
+    font-size: 2rem;
+  }
+  main .rocket img {
+    margin-top: 1rem;
+    height: 35rem;
+  }
+  main .rocket::before {
+    bottom: -67px;
+    width: 6rem;
+    height: 6.3rem;
+  }
+  main .rocket::after {
+    bottom: -67px;
+    width: 6rem;
+    height: 6.3rem;
+  }
+  #container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .planet {
+    margin-top: 2rem;
+    width: auto;
+  }
+  .planet img {
+    height: 45rem;
+    /* height: auto; */
+  }
+  
+  .info {
+    margin-top: 5rem;
+    width: auto;
+    height: auto;
+    margin: auto;
+  }
+  .info h1 {
+    font-size: 4rem;
+  }
+  .info p {
+    font-size: 2rem;
+  }
+  .cards {
+    display: flex;
+    flex-direction: row;
+    height: 12rem;
+    margin-top: 27rem;
+  }
+  .watermark{
+    font-size: 1.5rem;
+    right: 42%;
+  }
+}
+
+/* For Display Width Below 600px */
+@media screen and (max-width: 600px) {
+  header .title {
+    font-size: 2.8rem;
+  }
+  header .links {
+    display: none;
+  }
+  main .heading {
+    font-size: 10rem;
+  }
+  main p {
+    font-size: 2rem;
+  }
+  main .rocket img {
+    margin-top: 1rem;
+    height: 35rem;
+  }
+  main .rocket::before {
+    bottom: -67px;
+    width: 6rem;
+    height: 6.3rem;
+  }
+  main .rocket::after {
+    bottom: -67px;
+    width: 6rem;
+    height: 6.3rem;
+  }
+  #container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .planet {
+    margin-top: 2rem;
+    width: auto;
+  }
+  .planet img {
+    height: 45rem;
+    /* height: auto; */
+  }
+  .info {
+    margin-top: 5rem;
+    width: auto;
+    height: auto;
+    margin: auto;
+  }
+  .info h1 {
+    font-size: 4rem;
+  }
+  .info p {
+    font-size: 2rem;
+  }
+  .cards {
+    display: flex;
+    flex-direction: row;
+    height: 12rem;
+    margin-top: 30rem;
+  }
 }
