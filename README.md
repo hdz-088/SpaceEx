@@ -2,7 +2,7 @@
    <img src="src/banner.png" width="60%">
 </p>
 
-[SpaceEx](https://hdz-088.github.io/SpaceEx/) is a Solary System exploration site with basic details of Planets.
+[SpaceEx](https://hdz-088.github.io/SpaceEx/) is a Solar System exploration site with basic details of Planets.
 
 Made using HTML, CSS and JS
 
