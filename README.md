@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="img/Group 3.png" width="60%">
+   <img src="img/banner.png" width="60%">
 </p>
 
 [SpaceEx](https://hdz-088.github.io/SpaceEx/) is a Solary System exploration site with basic details of Planets.
